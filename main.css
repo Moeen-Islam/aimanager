@@ -1,0 +1,1135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; 
+    scroll-behavior: smooth;
+}
+:root{
+    --main-color: #00b7ff;
+    --text-color:#fff;
+    --bg-color : rgba(255, 255, 255, 0.1);
+}
+body {
+    transition: all .3s ease;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    z-index: 1;
+    background: linear-gradient(60deg, black, #162630);
+    background-size: 400% 400%;
+  }
+.home-section{
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-image: url(./image/bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.nav-section li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    /* padding: 10px 30px; */
+    transition: all 1s ease;
+   
+    
+}
+a:hover{
+    color: var(--main-color);
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.nav-section{
+    padding-top: 10px;
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-section .links li a:hover{
+    background-color: var(--main-color);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    box-shadow: 0 5px 15px var(--main-color);
+}
+.nav-section .links{
+    display: flex;
+    gap: 2rem;
+    
+}
+.nav-section .links li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all 1s ease;
+    padding: 10px 30px;
+    border-radius: 15px;
+}
+
+.nav-section .toggle_btn{
+    color: var(--main-color);
+    font-size: 2rem;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.nav-section .logo{
+    position: relative;
+    left: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--main-color);
+}
+/* Dropdown menu */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 50px;
+    height: 0;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height: 215px;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu li:hover{
+  background-color: var(--main-color);
+}
+.dropdown_menu li:hover a{
+  color: #000;
+  font-weight: bold;
+}
+
+.intro{
+    position: relative;
+    left: 100px;
+    top: 300px;
+    color: #fff;
+    /* font-size: 1.8rem; */
+    line-height: 4rem;
+    font-size: 3rem;
+}
+.intro h2{
+    font-weight: bold;
+    line-height: 5rem;
+}
+
+.intro span{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+.about-section{
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    z-index: 1;
+    background: linear-gradient(60deg, black, #162630);
+    background-size: 400% 400%;
+    animation: animate 10s ease infinite; 
+    overflow-y: hidden;
+}
+
+.about-details{
+    max-width: 100%;
+    display: flex;
+}
+
+.about-details .left{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-details .left img{
+    padding: 100px;
+    width: 800px;
+    height: auto;
+}
+.about-details .right{
+    width: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.about-details .right .text{
+   padding: 50px;
+    width: 700px;
+    height: auto;
+    align-items: center;
+}
+
+.about-details .right p{
+    color: #fff;
+}
+
+.about-details .right .text .text_header{
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-details .right .text span{
+    color: var(--main-color);
+}
+
+.about-details .right .text .text_details{
+    color: white;
+    text-align:justify;
+    font-size: 25px;
+    font-weight: 500;
+    word-spacing: 2px;
+    word-break: break-all;
+}
+
+
+.ratings-section{
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    z-index: 1;
+    background: linear-gradient(60deg, black, #162630);
+    background-size: 400% 400%;
+    animation: animate 10s ease infinite; 
+    overflow-y: hidden;
+}
+
+
+.ratings-section .rating-details{
+    max-width: 100%;
+    display: flex;
+}
+
+.ratings-section .rating-details .rating-right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ratings-section .rating-details .rating-right img{
+    padding: 100px;
+    width: 700px;
+    height: auto;
+}
+
+.ratings-section .rating-details .rating-left{
+    width: 50%;
+}
+.ratings-section .rating-details .rating-left .rating-header h2{
+    padding-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.ratings-section .rating-details .rating-left .rating-header span{
+    color: var(--main-color);
+}
+
+.ratings-section .rating-details .rating-left  img{
+    width: 30px;
+    height: auto;
+}
+
+.ratings-section .rating-details .rating-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ratings-section .rating-details .rating-left .rating-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #0a2b3c;
+    background-color: #0a2b3c;
+    border-radius: 10px;
+}
+
+.ratings-section .rating-details .rating-left .rating-details .rating-header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.ratings-section .rating-details .rating-left .rating-details .rating-header .skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0; 
+    
+}
+.ratings-section .rating-details .rating-left .rating-details .rating-header .skills .star-icons{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.ratings-section .rating-details .rating-left .rating-details .rating-header .skills .star-icons #AiName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ratings-section .rating-details .rating-left .rating-details .rating-header .skills .star-icons .name{
+    align-items: center;
+    min-width: 180px;
+    margin-left: 10px;
+    font-size: 1.4rem;
+}
+
+.ratings-section .rating-details .rating-left .rating-details .rating-header .skills .rating-star{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.stars-outer {
+    position: relative;
+    display: inline-block;
+    margin-left: 100px;
+  }
+  
+  .stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+  
+  .stars-outer::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: rgb(228, 228, 228);
+  }
+  
+  .stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--main-color);
+  }
+  
+
+  /* AI Tools Section */
+  .aitools{
+    height: 380vh;
+    width: 100%;
+    overflow-x: hidden;
+    z-index: 1;
+    background: linear-gradient(60deg, black, #162630);
+    background-size: 400% 400%;
+    animation: animate 10s ease infinite; 
+    overflow-y: hidden;
+  }
+
+  .aitools .Ai-header{
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    padding: 40px;
+    padding-bottom: 100px;
+  }
+
+  .aitools .AI-container{
+    margin-left: 12%;
+    width: 80%;
+    display: grid;
+    column-gap: 0.5rem;
+    row-gap: 4rem;
+    padding: auto 50px;
+    position: relative;
+    justify-content: center;
+    grid-template-columns: repeat(3,1fr);
+    
+  }
+  .aitools .AI-container .ai-item{
+    width: 400px;
+    box-shadow: 2px 2px 15px var(--main-color);
+    height: 505px;
+    margin: 20px auto;
+    position: relative;
+    background: #e4e7ed;
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .aitools .AI-container .ai-item img{
+    width: 100%;
+    transition: all 1s ease;
+    overflow: hidden;
+    height: 220px;
+  }
+  
+ .aitools .AI-container .ai-item .name{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 20px;
+ }
+ .aitools .AI-container .ai-item .aiName-logo{
+    display: flex;
+ }
+
+ .aitools .AI-container .ai-item .aiName-logo i{
+    color: var(--main-color);
+    font-size: 30px;
+    padding: 10px;
+    box-shadow: 1px var(--main-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: inline-flex;
+ }
+
+ .aitools .AI-container .ai-item .descrip{
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    word-break: break-all;
+    padding: 10px 20px;
+    position: relative;
+    height: 100px;
+    font-size: 1.2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+ }
+
+ .aitools .AI-container .ai-item .AI-btn{
+    position: fixed;
+    padding: 15px 20px;
+    background-color: var(--main-color);
+    width: 250px;
+    border-radius: 15px;
+    margin-left: 80px;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    border: none;
+    margin-top: 40px;
+ }
+ .aitools .AI-container .ai-item .AI-btn a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1.7rem;
+    text-align: center;
+ }
+
+.aitools .AI-container .ai-item .AI-btn:hover{
+    width: 100%;
+    margin-left: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: 0;
+    
+    
+}
+
+
+/* Toolkit */
+
+.aitools .AI-container .ai-item .aiName-logo .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+.aitools .AI-container .ai-item .aiName-logo .tooltip .tooltiptext {
+    visibility: hidden;
+  width: 160px;
+  background-color: #162630;
+  color: var(--main-color);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 3px;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+  }
+  
+.aitools .AI-container .ai-item .aiName-logo .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black ;
+  }
+  
+.aitools .AI-container .ai-item .aiName-logo .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(60deg, black, #162630);
+    background-size: 400% 400%;
+    animation: animate 10s ease infinite; 
+    overflow-y: hidden;
+
+}
+
+.contact-container
+{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+
+}
+
+.contact-container .contactInfo
+{
+    position: absolute;
+    top: 40px;
+    width: 350px;
+    height: calc(100% - 80px);
+    background: rgb(91, 106, 112);
+    z-index: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15); 
+    border-radius: 22px;
+}
+
+.contact-container .contactInfo h2
+{
+    color: #fff;
+    font-size:24px;
+    font-weight: 500;
+}
+
+.contact-container .contactInfo ul.info 
+{
+   position: relative;
+   margin: 20px 0; 
+}
+
+.contact-container .contactInfo ul.info li
+{
+   position: relative;
+   list-style: none;
+   display: flex;
+   margin: 20px 0;
+   cursor: pointer;
+   align-items: flex-start;
+}
+.contact-container .contactInfo ul.info li i{
+  width: 30px;
+  font-size: 25px;
+  color: var(--main-color) ;
+}
+
+.contact-container .contactInfo ul.info li span:nth-child(1)
+{
+    width: 30px;
+    min-width: 30px;
+}
+
+.contact-container .contactInfo ul.info li span a
+{
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: bold;
+    width: 30px;
+    min-width: 30px;
+    
+}
+
+.contact-container .contactInfo ul.info li span:nth-child(2)
+{
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+.contact-container .contactInfo ul.sci
+{
+    position: relative;
+    display: flex;
+}
+
+.contact-container .contactInfo ul.sci li
+{
+   list-style: none;  
+   margin-right: 15px;
+}
+
+.contact-container .contactInfo ul.sci li a
+{
+   text-decoration: none;
+}
+
+.contact-container .contactInfo ul.sci li a i
+{
+  width: 30px;
+  color: #ff0000 ;
+  font-size: 30px;
+   filter: invert(1);
+}
+
+.contact-container .contactForm
+{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: rgb(132, 140, 143); 
+    box-shadow: 5px 10px 20px var(--main-color);
+    border-radius: 22px;
+}
+
+.contact-container .contactForm h2
+{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.contact-container .contactForm .formBox
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+.contact-container .contactForm .formBox .inputBox
+{
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.contact-container .contactForm .formBox .inputBox.w50
+{
+    width: 47%;
+}
+
+.contact-container .contactForm .formBox .inputBox.w100
+{
+    width: 100%;
+}
+
+.contact-container .contactForm .formBox .inputBox input,
+.contact-container .contactForm .formBox .inputBox textarea 
+{
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+    border: none;
+    outline: none;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid #777;
+}
+
+.contact-container .contactForm .formBox .inputBox textarea 
+{
+    height: 120px;
+}
+
+.contact-container .contactForm .formBox .inputBox span 
+{
+    position: absolute;
+    left: 0;
+    color: white;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 18px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+.contact-container .contactForm .formBox .inputBox input:focus ~ span,
+.contact-container .contactForm .formBox .inputBox input:valid ~ span,
+.contact-container .contactForm .formBox .inputBox textarea:focus ~ span, 
+.contact-container .contactForm .formBox .inputBox textarea:valid ~ span
+{
+    transform: translateY(-20px);
+    font-size:  12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--main-color);
+    font-weight: 500;
+} 
+
+/* Css for the submit button */
+.contact-container .contactForm .formBox .inputBox input[type="submit"]         
+{
+    position: relative;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 20px;
+    color: #000;
+    border: 1px solid var(--main-color);
+    max-width: 150px;
+    padding: 12px 30px;
+  transition: all 1s each;
+}
+
+.contact-container .contactForm .formBox .inputBox input[type="submit"]:hover{
+    background: var(--main-color);
+}
+
+/* make the form responsive */
+@media (max-width: 1200px)
+{
+    .contact-container
+    {
+        width: 90%;
+        min-width: auto;
+        margin: 20px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    }
+
+    .contact-container .contactInfo
+    {
+        top: 0;
+        height: 550px;
+        position: relative;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+
+    .contact-container .contactForm
+    {
+        position: relative;
+        width: calc(100% - 350px);
+        padding-left: 0;
+        margin-left: 0;
+        padding: 40px;
+        height: 550px;
+        box-shadow: none;
+        border-radius: 0px;
+    }
+}
+
+@media (max-width: 991px)
+{
+    .contact
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        
+    }
+
+    .contact-container
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contact-container .contactForm
+    {
+        width: 100%;
+        height: auto;
+        border-radius: 0px;
+    }
+
+    .contact-container .contactInfo
+    {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        border-radius: 0px;
+    }
+    .contact-container .contactInfo ul.sci
+    {
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .contact-container .contactForm
+    {
+        padding: 25px;
+    }
+
+    .contact-container .contactInfo{
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-container .contactInfo ul.sci
+    {
+        margin-top: 40px;
+    }
+
+    .contact-container .contactForm .formBox .inputBox.w50
+    {
+        width: 100%;
+    }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animate{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+
+}
+
+/* Responsive */
+@media(max-width: 1600px){
+    .intro{
+        font-size: 2rem;
+    }
+    .aitools .AI-container{
+      padding: auto 30px;
+      margin-left: 10%;
+    }
+    .aitools .AI-container .ai-item{
+      width: 350px;
+    }
+    .aitools .AI-container .ai-item .AI-btn{
+      margin-left: 50px;
+      padding: 10px 15px;
+      margin-top: 50px;
+    }
+}
+@media(max-width: 1400px){
+  .aitools .AI-container{
+    width: 90%;
+  margin: 5%;
+  }
+}
+
+@media(max-width: 1210px){
+    .about-details .left img{
+        width: 500px;
+        height: auto;
+    }
+    .about-details .right .text .text_header{
+        font-size: 2rem;
+    }
+    .about-details .right p{
+        font-size: 1rem;
+        word-spacing: 1px
+    }
+
+    .ratings-section .rating-details .rating-right img{
+        width: 600px;
+        justify-content: center;
+        height: auto;
+    }
+    .ratings-section .rating-details .rating-left {
+        padding: 60px;
+    }
+
+    .ratings-section .rating-details .rating-left .rating-details .rating-header .skills .star-icons .name{
+        min-width: 150px;
+    }
+    .aitools .AI-container{
+      grid-template-columns: repeat(2,1fr);
+    }
+    .aitools .AI-container .ai-item{
+      width: 400px;
+    }
+    .aitools .AI-container .ai-item .AI-btn{
+      margin-left: 80px;
+    }
+
+}
+
+@media(max-width: 1100px){
+    .intro{
+        font-size: 1.5rem;
+    }
+    .nav-section .links li a{
+        padding: 10px 20px;
+        font-size: 1.1rem;
+    }
+
+    .ratings-section .rating-details .rating-left .rating-details .rating-header .skills .star-icons .name{
+      align-items: center;
+      min-width: 140px;
+      margin-left: 10px;
+      font-size: 1.4rem;
+  }
+  .stars-outer {
+    position: relative;
+    display: inline-block;
+    margin-left: 70px;
+  }
+
+
+}
+@media(max-width: 990px){
+    .nav-section .logo{
+        left: 35px;
+    }
+
+    .about-details{
+        max-width: 100%;
+        display: block;
+    }
+    .about-details .left{
+        width: 100%;
+    }
+    .about-details .right{
+        width: 100%;
+    }
+    .aitools .AI-container{
+      padding: auto 30px;
+      margin-left: 3%;
+    }
+    .aitools .AI-container .ai-item{
+      width: 320px;
+      margin: auto 15px;
+    }
+    .aitools .AI-container .ai-item .AI-btn{
+      margin-left: 36px;
+      padding: 10px 15px;
+      margin-top: 50px;
+    }
+
+}
+
+
+@media(max-width: 950px){
+    .nav-section .links{
+        display: none;
+    }
+    body{
+        width: 100%;
+    }
+    .intro{
+        font-size: 1.2rem;
+    }
+    .nav-section .toggle_btn{
+        visibility: visible;
+    }
+    .dropdown_menu{
+        display: block;
+    }
+    .ratings-section{
+      height: auto;
+      margin-bottom: 50px;
+    }
+
+    .ratings-section .rating-details{
+      max-width: 100%;
+      display: block;
+  }
+
+.ratings-section .rating-details .rating-right{
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.ratings-section .rating-details .rating-right img{
+    width: 750px;
+    padding: 30px;
+    height: auto;
+}
+.ratings-section .rating-details .rating-left{
+  width: 100%;
+  display: block;
+}
+.ratings-section .rating-details .rating-left .rating-details .rating-header .skills .star-icons .name{
+  align-items: center;
+  min-width: 220px;
+  margin-left: 10px;
+  font-size: 1.4rem;
+}
+.stars-outer {
+position: relative;
+display: inline-block;
+margin-left: 100px;
+}
+
+
+
+
+
+
+}
+@media(max-width: 700px){
+  .aitools .AI-container{
+    grid-template-columns: 1fr;
+    
+   margin-left: 20%;
+  }
+  .aitools .AI-container .ai-item{
+    width: 400px;
+    margin: auto 15px;
+  }
+  .aitools .AI-container .ai-item .AI-btn{
+    margin-left: 80px;
+    padding: 10px 20px;
+    margin-top: 50px;
+  }
+
+  .ratings-section .rating-details .rating-right img{
+    width: 650px;
+    height: auto;
+}
+.ratings-section .rating-details .rating-left{
+  width: 100%;
+  display: block;
+}
+.ratings-section .rating-details .rating-left .rating-details .rating-header .skills .star-icons .name{
+  align-items: center;
+  min-width: 180px;
+  margin-left: 10px;
+  font-size: 1.4rem;
+}
+.stars-outer {
+position: relative;
+display: inline-block;
+margin-left: 80px;
+}
+}
+
+@media(max-width: 576px){
+    .intro{
+        left: 50px;
+    }
+    .about-details .right .text .text_details{
+        text-align: justify;
+        word-break: break-all;
+    }
+
+    .aitools .AI-container{
+      grid-template-columns: 1fr;
+      
+     margin-left: 10%;
+    }
+    .dropdown_menu{
+      left: 1.5rem;
+      width: unset;
+   }
+   .intro{
+      left: 40px;
+      font-size: 15px;
+      line-height: 1rem;
+  }
+  .ratings-section .rating-details .rating-right img{
+    width: 500px;
+    height: auto;
+}
+.ratings-section .rating-details .rating-left .rating-details .rating-header .skills .star-icons .name{
+  align-items: center;
+  min-width: 100px;
+  margin-left: 10px;
+  font-size: 1.4rem;
+}
+.stars-outer {
+position: relative;
+display: inline-block;
+margin-left: 60px;
+}
+
+}
+@media(max-width: 470px){
+  .ratings-section .rating-details .rating-left{
+    width: 100%;
+    padding: 0;
+    margin: 10px;
+  }
+  .aitools .AI-container .ai-item{
+    width: 300px;
+    margin: auto 15px;
+  }
+  .aitools .AI-container .ai-item .AI-btn{
+    margin-left: 30px;
+    padding: 10px 15px;
+    margin-top: 50px;
+  }
+}
+@media(max-width: 400px){
+  .aitools .AI-container .ai-item{
+    width: 300px;
+    margin: auto 15px;
+  }
+  .aitools .AI-container .ai-item .AI-btn{
+    margin-left: 30px;
+    padding: 10px 15px;
+    margin-top: 50px;
+  }
+  
+}
